@@ -76,7 +76,7 @@ class Chunker implements ChunkerContract
         $path = config('chunker.save_path') . '/' . $id;
         $fileName = $path . "/" . self::FINAL_NAME;
         if ($chunkHistory->status == ChunkHistory::DONE && file_exists($fileName)) {
-            return new ChunkResponse($chunkHistory->id, $chunkHistory->type);
+            return new ChunkResponse($chunkHistory);
         }
 
         DB::transaction(function () use ($fileName, $path, $chunkHistory) {
@@ -86,9 +86,12 @@ class Chunker implements ChunkerContract
             $this->deleteChunkedFiles($path);
         });
 
-        return new ChunkResponse($chunkHistory->id, $chunkHistory->type);
+        return new ChunkResponse($chunkHistory);
     }
 
+    /**
+     * @throws ChunkHistoryNotFoundException
+     */
     public function cancel(string $id)
     {
         $chunkHistory = $this->checkChunkStatus($id, [ChunkHistory::CANCELED, ChunkHistory::DONE]);

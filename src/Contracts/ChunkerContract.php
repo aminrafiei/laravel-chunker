@@ -35,6 +35,7 @@ interface ChunkerContract
 
     /**
      * @param string $id
+     * @throws ChunkHistoryNotFoundException
      * @return mixed
      */
     public function cancel(string $id);
