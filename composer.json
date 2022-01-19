@@ -1,0 +1,29 @@
+{
+    "name": "aminrafiei/laravel-chunker",
+    "description": "This package use for chunk file request",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Amin",
+            "email": "amin.amin111@yahoo.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.3|^8.0",
+        "laravel/framework":"^7.0|^8.0|^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Aminrafiei\\Chunker\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Aminrafiei\\Chunker\\ChunkerServiceProvider"
+            ]
+        }
+    }
+}
