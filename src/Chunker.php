@@ -33,13 +33,13 @@ class Chunker implements ChunkerContract
         $this->chunkService = $chunkService;
     }
 
-    public function init(string $fileName, string $fileType, int $totalChunks, int $totalSize): ChunkHistory
+    public function init(string $fileName, string $fileType, int $totalChunks, int $totalSize, string $mimeType = null): ChunkHistory
     {
         if (!file_exists(config('chunker.save_path'))) {
             mkdir(config('chunker.save_path'), 0776, true);
         }
 
-        return $this->chunkService->createChunkHistory($fileName, $fileType, $totalChunks, $totalSize);
+        return $this->chunkService->createChunkHistory($fileName, $fileType, $totalChunks, $totalSize, $mimeType);
     }
 
     /**

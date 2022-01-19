@@ -14,6 +14,7 @@ class ChunkResponse
     protected $realPath;
     protected $path;
     protected $type;
+    protected $mimeType;
 
     public function __construct(ChunkHistory $chunkHistory)
     {
@@ -24,6 +25,23 @@ class ChunkResponse
         $this->realPath = config('chunker.save_path') . '/' . $chunkHistory->id . '/' . Chunker::FINAL_NAME;
         $this->path = $chunkHistory->id . '/' . Chunker::FINAL_NAME;
         $this->type = $chunkHistory->type;
+        $this->mimeType = $chunkHistory->mime_type;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMimeType()
+    {
+        return $this->mimeType;
+    }
+
+    /**
+     * @param mixed $mimeType
+     */
+    public function setMimeType($mimeType): void
+    {
+        $this->mimeType = $mimeType;
     }
 
     /**

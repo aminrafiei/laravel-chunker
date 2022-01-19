@@ -30,14 +30,15 @@ class ChunkService
         return $chunkHistory;
     }
 
-    public function createChunkHistory($fileName, $fileType, $totalChunks, $totalSize)
+    public function createChunkHistory($fileName, $fileType, $totalChunks, $totalSize, $mimeType = null)
     {
         return ChunkHistory::firstOrCreate([
             'id'           => md5(uniqid() . '_' . $fileName),
             'name'         => trim($fileName),
             'type'         => $fileType,
             'total_chunks' => $totalChunks,
-            'total_size'   => $totalSize
+            'total_size'   => $totalSize,
+            'mime_type'   => $mimeType,
         ]);
     }
 }
