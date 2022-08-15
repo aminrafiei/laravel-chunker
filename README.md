@@ -1,6 +1,11 @@
 
 # Laravel Chunker
 
+[![Latest Stable Version](http://poser.pugx.org/aminrafiei/laravel-chunker/v)](https://packagist.org/packages/aminrafiei/laravel-chunker)
+[![Total Downloads](http://poser.pugx.org/aminrafiei/laravel-chunker/downloads)](https://packagist.org/packages/aminrafiei/laravel-chunker)
+[![License](http://poser.pugx.org/aminrafiei/laravel-chunker/license)](https://packagist.org/packages/aminrafiei/laravel-chunker)
+[![PHP Version Require](http://poser.pugx.org/aminrafiei/laravel-chunker/require/php)](https://packagist.org/packages/aminrafiei/laravel-chunker)
+
 This package help you to handle chunk files in Laravel easily, and at the end it convert files to one file.
 
 
