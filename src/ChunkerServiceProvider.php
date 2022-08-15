@@ -18,8 +18,4 @@ class ChunkerServiceProvider extends ServiceProvider
         $this->app->singleton('chunker', Chunker::class);
     }
 
-    public function register()
-    {
-
-    }
 }
