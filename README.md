@@ -1,7 +1,7 @@
 
 # Laravel Chunker
 
-This package help you handle chunk file request and finally make it to one file.
+This package help you to handle chunk files in Laravel easily, and at the end it convert files to one file.
 
 
 ## Installation
