@@ -1,6 +1,6 @@
 {
     "name": "aminrafiei/laravel-chunker",
-    "description": "This package use for chunk file request",
+    "description": "This package is useful for handle chunk files in Laravel easily",
     "type": "library",
     "license": "MIT",
     "authors": [
